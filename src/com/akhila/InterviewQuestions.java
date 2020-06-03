@@ -31,4 +31,25 @@ public class InterviewQuestions {
         }
 
     }
+
+    public void q122_reverseString(String str)
+    {
+        if(str==null)
+        {
+            System.out.println("Null input");
+        }
+        else
+        {
+            //Method 1
+            String out = "";
+            for(int i = str.length()-1;i>=0;i--)
+            {
+                out = out+str.charAt(i);
+            }
+
+            //Method 2:
+            out = new StringBuilder(str).reverse().toString();
+            System.out.println(out);
+        }
+    }
 }
